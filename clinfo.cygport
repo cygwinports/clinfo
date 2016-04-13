@@ -1,0 +1,21 @@
+NAME="clinfo"
+VERSION=2.1.16.01.12
+RELEASE=1
+CATEGORY="Utils"
+SUMMARY="OpenCL information"
+DESCRIPTION="A simple OpenCL application that enumerates all possible platform
+and device properties."
+HOMEPAGE="https://github.com/Oblomov/clinfo"
+SRC_URI="https://github.com/Oblomov/clinfo/archive/${VERSION}/clinfo-${VERSION}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	dobin clinfo.exe
+	doman man/clinfo.1
+}
