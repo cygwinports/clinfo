@@ -1,5 +1,5 @@
 NAME="clinfo"
-VERSION=2.2.17.08.25
+VERSION=2.2.17.10.25
 RELEASE=1
 CATEGORY="Utils"
 SUMMARY="OpenCL information"
@@ -17,5 +17,5 @@ src_compile() {
 src_install() {
 	cd ${B}
 	dobin clinfo.exe
-	doman man/clinfo.1
+	doman man1/clinfo.1
 }
